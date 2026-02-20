@@ -43,22 +43,5 @@ I evaluated multiple algorithms using 5-fold Cross-Validation before fine-tuning
 
 ---
 
-## 4. Results & Evaluation
 
-After identifying XGBoost as the top performer, hyperparameter tuning was applied. Since the model was trained on a log-transformed target, predictions were inverse-transformed (`np.expm1`) to evaluate the final RMSE in the original business unit (number of bikes).
 
-| Model | CV RMSE (Log Scale) | Test RMSE (Real Bikes) |
-| :--- | :---: | :---: |
-| Linear Regression | [Insert value] | - |
-| Random Forest | [Insert value] | - |
-| **XGBoost (Tuned)** | **[Insert value]** | **[Insert value]** |
-
-**Conclusion:**
-The model successfully learned the complex bimodal demand patterns (spikes during 8:00 AM and 5:00 PM commuting hours) and seasonal drops. The final test RMSE indicates a strong generalization capability, meaning the business operations team can confidently use these predictions to trigger automated rebalancing tasks.
-
-## 5. How to Run This Project
-
-1. Clone this repository:
-   ```bash
-   git clone [https://github.com/ph-b-campos/Bike-Rental-Prediction.git](https://github.com/ph-b-campos/Bike-Rental-Prediction.git)
-   
